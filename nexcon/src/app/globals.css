@@ -1,10 +1,97 @@
+/* app/globals.css */
+
+/* 1. Tailwind CSS Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+/*
+   -------------------------------------------------------------------
+   2. Base Styles (Element Selectors)
+   These styles apply to ALL instances of the HTML element
+   -------------------------------------------------------------------
+*/
+html, body {
+  height: 100%; /* Make html and body take full viewport height */
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Inter', sans-serif; /* Your preferred font */
+  background-color: #f9f9f9; /* Light background for the whole page */
+  color: #333; /* Default text color */
+  line-height: 1.6; /* Improve readability */
+
+  /* Flexbox layout for the entire page content */
+  display: flex;
+  flex-direction: column; /* Stack children (Navbar, Main, Footer) vertically */
+  min-height: 100vh; /* Ensure body takes at least the full viewport height */
 }
+
+a {
+  text-decoration: none; /* Remove underlines from all links by default */
+  color: inherit; /* Inherit color from parent, or set a default link color */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: #6366f1; /* Example hover color for all links */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Make all headings bold */
+  margin-top: 1.5em; /* Add space above headings */
+  margin-bottom: 0.5em; /* Add space below headings */
+  color: #1a202c; /* Default heading color */
+}
+
+p {
+  margin-bottom: 1em; /* Space below paragraphs */
+}
+
+/*
+   -------------------------------------------------------------------
+   3. Layout Styles (ID Selectors & General Classes for Layout)
+   Use IDs for unique, major sections of your layout (e.g., #header, #main-content, #footer)
+   -------------------------------------------------------------------
+*/
+#main-content {
+  flex-grow: 1; /* This makes the main content area take up all available vertical space */
+  /* The Tailwind classes 'container mx-auto p-4' remain in layout.tsx for responsiveness */
+}
+
+/* Example: A custom class for specific container styles */
+.custom-section-padding {
+  padding: 2rem 1rem; /* Example custom padding */
+}
+
+/*
+   -------------------------------------------------------------------
+   4. Component Specific Styles (Class Selectors)
+   These are custom classes you create for specific components or elements where
+   Tailwind isn't enough, or you want to encapsulate a group of styles.
+   -------------------------------------------------------------------
+*/
+
+/* Example: Custom button style (if not using Tailwind's button utilities) */
+.btn-primary {
+  background-color: #4f46e5; /* Indigo-600 equivalent */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Ensure it behaves like a button */
+}
+
+.btn-primary:hover {
+  background-color: #4338ca; /* Darker indigo on hover */
+}
+
+/* Example: A custom class for the Navbar background if you wanted to define it here */
+/* .navbar-custom-bg {
+  background: linear-gradient(to right, #4f46e5, #1e3a8a, #5b21b6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+} */

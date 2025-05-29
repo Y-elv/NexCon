@@ -71,8 +71,8 @@
   
   /* Support Button */
   .supportButton {
-    background-color: #f59e0b; /* bg-yellow-500 */
-    color: black; /* text-black */
+    background-color: #fcd34d; /* bg-yellow-500 */
+    color: #1e3a8a; /* text-black */
     padding: 0.55rem 1rem; /* px-6 py-3 */
     border-radius: 9999px; /* rounded-full */
     transition-property: background-color, transform, box-shadow;
@@ -84,7 +84,8 @@
   }
   
   .supportButton:hover {
-    background-color: #d97706; /* hover:bg-yellow-600 */
+    background-color: #1e3a8a;
+    color: #fcd34d; /* hover:bg-yellow-600 */
     transform: translateY(-2px); /* hover:-translate-y-0.5 */
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* hover:shadow-xl */
   }

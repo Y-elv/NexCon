@@ -1,0 +1,297 @@
+/* app/home/home.module.css */
+
+/*
+   -------------------------------------------------------------------
+   1. Hero Section Styles
+   -------------------------------------------------------------------
+*/
+.heroSection {
+  position: relative; /* Needed for Image layout="fill" */
+  height: 100vh; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Default text color for hero content */
+  overflow: hidden; /* Ensures image doesn't overflow */
+}
+
+.heroImage {
+  z-index: 0; /* Place image behind content */
+  filter: brightness(60%); /* Darken the image slightly for text readability */
+}
+
+.heroContent {
+  position: relative; /* Bring content above the image */
+  z-index: 1;
+  max-width: 900px; /* Constrain content width */
+  padding: 0 1.5rem; /* Horizontal padding */
+}
+
+.heroHeading {
+  font-size: 3.5rem; /* Large heading */
+  font-weight: 800; /* Extra bold */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubheading {
+  font-size: 1.5rem; /* Larger subheading */
+  font-weight: 300; /* Lighter font weight */
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.heroCtaGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.heroCtaPrimary {
+  /* Using the primary blue color for the main CTA */
+  background-color: #1e3a8a; /* A strong blue from your footer gradient */
+  color: #f6da7e; /* White text on blue background */
+  padding: 1rem 2rem;
+  border-radius: 9999px; /* Fully rounded */
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Remove underline */
+}
+
+.heroCtaPrimary:hover {
+  background-color: #c09711; /* A slightly lighter blue/indigo on hover */
+  transform: translateY(-2px);
+  color: #1e3a8a; /* Dark text on hover */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.heroCtaSecondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #1e3a8a; /* White border */
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    border-color 0.3s ease, color 0.3s ease; /* Added color to transition */
+  text-decoration: none; /* Remove underline */
+}
+
+.heroCtaSecondary:hover { /* Slightly transparent white background */
+  transform: translateY(-2px);
+  border-color: #fcd34d; /* Yellow-300 border on hover */
+  color: #1e3a8a;; /* Yellow text on hover */
+}
+
+/*
+   -------------------------------------------------------------------
+   2. Section Title (Reusable for Mission, Services, CTA)
+   -------------------------------------------------------------------
+*/
+.sectionTitle {
+  font-size: 2.5rem; /* Larger title for sections */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem; /* Space below title */
+  color: #1a202c; /* Dark text */
+  padding-top: 2rem; /* Add some space above the section title */
+}
+
+/*
+   -------------------------------------------------------------------
+   3. Mission/Vision Section Styles
+   -------------------------------------------------------------------
+*/
+.missionSection {
+  padding: 4rem 1.5rem; /* Vertical and horizontal padding */
+  background-color: #f0f4f8; /* Light blue-gray background */
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 2rem; /* Space between cards */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .missionGrid {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  }
+}
+
+.missionCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+.missionCard h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #4f46e5; /* Indigo-600 */
+}
+
+.missionCard p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4a5568; /* Gray-700 */
+}
+
+/*
+   -------------------------------------------------------------------
+   4. Services Section Styles
+   -------------------------------------------------------------------
+*/
+.servicesSection {
+  padding: 4rem 1.5rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Pushes link to bottom */
+}
+
+.serviceCardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a202c;
+}
+
+.serviceCardDescription {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem; /* Space before link */
+  flex-grow: 1; /* Allows description to take available space */
+}
+
+.serviceCardLink {
+  /* Default state: Blue background, white text */
+  background-color: #1e3a8a; /* Primary Blue */
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+  text-decoration: none;
+  margin-top: 1rem; /* Ensure space from description */
+  border: 1px solid transparent; /* Transparent border to prevent jump */
+}
+
+.serviceCardLink:hover {
+  /* Hover state: Transparent background, yellow border & text */
+  border: 1px solid #fcd34d; /* Yellow-300 border */
+  color: #fcd34d; /* Yellow text */
+  background-color: transparent; /* Transparent background on hover */
+}
+
+/*
+   -------------------------------------------------------------------
+   5. Call to Action Section Styles
+   -------------------------------------------------------------------
+*/
+.ctaSection {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(
+    to right,
+    #4f46e5,
+    #5b21b6
+  ); /* Simple gradient for CTA */
+  text-align: center;
+  color: white;
+}
+
+.ctaHeading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.ctaDescription {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.ctaButton {
+  /* Default state: Yellow background, dark text */
+  background-color: #fcd34d; /* The specific yellow color */
+  color: #1a202c; /* Dark text for contrast on yellow */
+  padding: 1rem 2.5rem;
+  border-radius: 9999px; /* Fully rounded */
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease, color 0.3s ease; /* Added color to transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-block; /* Essential for padding and transform to work */
+  border: 1px solid transparent; /* Transparent border to prevent jump */
+}
+
+.ctaButton:hover {
+  /* Hover state: Blue background, white text */
+  background-color: #1e3a8a; /* Primary Blue */
+  color: white; /* White text on blue background */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  border-color: #1e3a8a; /* Ensure border color matches background if you want solid effect */
+}
+
+/*
+   -------------------------------------------------------------------
+   Responsive Adjustments (Media Queries)
+   -------------------------------------------------------------------
+*/
+@media (max-width: 767px) {
+  /* Small screens (like mobile) */
+  .heroHeading {
+    font-size: 2.5rem;
+  }
+  .heroSubheading {
+    font-size: 1.2rem;
+  }
+  .sectionTitle,
+  .ctaHeading {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg breakpoint (Desktop) */
+  .heroHeading {
+    font-size: 4.5rem;
+  }
+  .heroSubheading {
+    font-size: 1.75rem;
+  }
+}

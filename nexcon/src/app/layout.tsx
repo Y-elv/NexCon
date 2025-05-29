@@ -1,13 +1,19 @@
-// app/layout.tsx
-import "./globals.css"; // This is crucial for importing your global styles
+// src/app/layout.tsx
+import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import React from "react";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Enihakkore International Ministry",
   description:
     "Official website for Enihakkore International Ministry. Learn about our mission, services, and how to support us.",
+  icons: {
+    // This path is relative to the `public` directory.
+    // It correctly points to `public/favicon.ico`
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -19,11 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main id="main-content">
-          {" "}
-          {/* This ID is styled in globals.css */}
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

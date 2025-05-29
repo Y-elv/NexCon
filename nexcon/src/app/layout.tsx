@@ -18,11 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {" "}
-        {/* className="flex flex-col min-h-screen" has been removed */}
         <Navbar />
-        {/* The 'container mx-auto p-4' Tailwind classes remain on the main tag for content sizing */}
-        <main id="main-content" className="container mx-auto p-4">
+        <main id="main-content">
+          {" "}
+          {/* This ID is styled in globals.css */}
           {children}
         </main>
         <Footer />

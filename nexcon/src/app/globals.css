@@ -1,14 +1,15 @@
 /* app/globals.css */
 
-/* 1. Tailwind CSS Directives */
+/* 1. Tailwind CSS Directives (Keep these as they are still needed for Tailwind's base/components/utilities) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /*
    -------------------------------------------------------------------
-   2. Base Styles (Element Selectors)
-   These styles apply to ALL instances of the HTML element
+   2. Base Styles (Element Selectors & Global Layout)
+   These styles apply to ALL instances of the HTML element across the app.
+   This is also where the overall page layout (flex column) is defined.
    -------------------------------------------------------------------
 */
 html, body {
@@ -23,24 +24,26 @@ body {
   color: #333; /* Default text color */
   line-height: 1.6; /* Improve readability */
 
-  /* Flexbox layout for the entire page content */
+  /* Overall page layout (flex column) */
   display: flex;
   flex-direction: column; /* Stack children (Navbar, Main, Footer) vertically */
   min-height: 100vh; /* Ensure body takes at least the full viewport height */
 }
 
+/* Global link styles (can be overridden by component-specific styles) */
 a {
   text-decoration: none; /* Remove underlines from all links by default */
-  color: inherit; /* Inherit color from parent, or set a default link color */
+  color: inherit; /* Inherit color from parent */
   transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
+/* Global hover effect for links - can be overridden by more specific classes */
 a:hover {
-  color: #6366f1; /* Example hover color for all links */
+  color: #6366f1; /* Example global link hover color */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; /* Make all headings bold */
+  font-weight: 700; /* Make all headings bold by default */
   margin-top: 1.5em; /* Add space above headings */
   margin-bottom: 0.5em; /* Add space below headings */
   color: #1a202c; /* Default heading color */
@@ -52,46 +55,14 @@ p {
 
 /*
    -------------------------------------------------------------------
-   3. Layout Styles (ID Selectors & General Classes for Layout)
-   Use IDs for unique, major sections of your layout (e.g., #header, #main-content, #footer)
+   3. Main Content Layout (ID Selector)
+   This defines the main content area that wraps children in layout.tsx.
    -------------------------------------------------------------------
 */
 #main-content {
   flex-grow: 1; /* This makes the main content area take up all available vertical space */
-  /* The Tailwind classes 'container mx-auto p-4' remain in layout.tsx for responsiveness */
+  max-width: 1280px; /* Equivalent to a 'container' breakpoint */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem; /* Padding around the main content */
 }
-
-/* Example: A custom class for specific container styles */
-.custom-section-padding {
-  padding: 2rem 1rem; /* Example custom padding */
-}
-
-/*
-   -------------------------------------------------------------------
-   4. Component Specific Styles (Class Selectors)
-   These are custom classes you create for specific components or elements where
-   Tailwind isn't enough, or you want to encapsulate a group of styles.
-   -------------------------------------------------------------------
-*/
-
-/* Example: Custom button style (if not using Tailwind's button utilities) */
-.btn-primary {
-  background-color: #4f46e5; /* Indigo-600 equivalent */
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  transition: background-color 0.3s ease;
-  display: inline-block; /* Ensure it behaves like a button */
-}
-
-.btn-primary:hover {
-  background-color: #4338ca; /* Darker indigo on hover */
-}
-
-/* Example: A custom class for the Navbar background if you wanted to define it here */
-/* .navbar-custom-bg {
-  background: linear-gradient(to right, #4f46e5, #1e3a8a, #5b21b6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-} */

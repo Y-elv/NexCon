@@ -1,0 +1,90 @@
+/* components/Navbar.module.css */
+
+/* Base Navbar container */
+.mainNavbar {
+    background: linear-gradient(to right, #4f46e5, #1e3a8a, #5b21b6); /* from-indigo-600 via-blue-900 to-purple-900 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* border-b border-white/20 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+    height: 70px; /* h-24 (24 * 4px = 96px) */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center its content */
+  }
+  
+  /* Inner container for Navbar content */
+  .innerContainer {
+    max-width: 1280px; /* container */
+    width: 100%; /* container */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 1.25rem; /* py-5 */
+    padding-bottom: 1.25rem; /* py-5 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px; /* h-24 */
+  }
+  
+  /* Logo and Ministry Name Link */
+  .logoLink {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* space-x-3 */
+    color: white; /* text-white */
+    text-decoration: none; /* Important for links within this component */
+  }
+  
+  .logoImage {
+    border-radius: 9999px; /* rounded-full */
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  
+  .ministryName {
+    font-weight: 700; /* font-bold */
+    font-size: 1.25rem; /* text-xl */
+    white-space: nowrap;
+  }
+  
+  /* Navigation Links Container */
+  .linksContainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* space-x-8 */
+    color: white; /* text-white */
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+  }
+  
+  /* Individual Navigation Link */
+  .navLink {
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .navLink:hover {
+    color: #fcd34d; /* hover:text-yellow-300 */
+  }
+  
+  /* Support Button */
+  .supportButton {
+    background-color: #f59e0b; /* bg-yellow-500 */
+    color: black; /* text-black */
+    padding: 0.55rem 1rem; /* px-6 py-3 */
+    border-radius: 9999px; /* rounded-full */
+    transition-property: background-color, transform, box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    display: inline-block; /* Ensure it's a block for transform */
+  }
+  
+  .supportButton:hover {
+    background-color: #d97706; /* hover:bg-yellow-600 */
+    transform: translateY(-2px); /* hover:-translate-y-0.5 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* hover:shadow-xl */
+  }

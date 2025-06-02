@@ -12,14 +12,18 @@
    This is also where the overall page layout (flex column) is defined.
    -------------------------------------------------------------------
 */
-html, body {
-  height: 100%; /* Make html and body take full viewport height */
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width/height */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+html,
+body {
+  height: 100%;
 }
 
 body {
-  font-family: 'Inter', sans-serif; /* Your preferred font */
+  font-family: "Inter", sans-serif; /* Your preferred font */
   background-color: #f9f9f9; /* Light background for the whole page */
   color: #333; /* Default text color */
   line-height: 1.6; /* Improve readability */
@@ -27,7 +31,8 @@ body {
   /* Overall page layout (flex column) */
   display: flex;
   flex-direction: column; /* Stack children (Navbar, Main, Footer) vertically */
-  min-height: 100vh; /* Ensure body takes at least the full viewport height */
+  min-height: 100vh;
+  /* Ensure body takes at least the full viewport height */
 }
 
 /* Global link styles (can be overridden by component-specific styles) */
@@ -42,7 +47,12 @@ a:hover {
   color: #6366f1; /* Example global link hover color */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700; /* Make all headings bold by default */
   margin-top: 1.5em; /* Add space above headings */
   margin-bottom: 0.5em; /* Add space below headings */
@@ -61,7 +71,7 @@ p {
 */
 #main-content {
   flex-grow: 1; /* This makes the main content area take up all available vertical space */
-  max-width: 1280px; /* Equivalent to a 'container' breakpoint */
+  width: 100vw; /* Equivalent to a 'container' breakpoint */
   margin-left: auto;
   margin-right: auto;
   padding: 1rem; /* Padding around the main content */

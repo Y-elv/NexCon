@@ -13,7 +13,9 @@
   justify-content: center;
   text-align: center;
   color: white; /* Default text color for hero content */
-  overflow: hidden; /* Ensures image doesn't overflow */
+  overflow: hidden;
+  overflow-x: hidden;
+   /* Ensures image doesn't overflow */
 }
 
 .heroImage {
@@ -81,10 +83,11 @@
   text-decoration: none; /* Remove underline */
 }
 
-.heroCtaSecondary:hover { /* Slightly transparent white background */
+.heroCtaSecondary:hover {
+  /* Slightly transparent white background */
   transform: translateY(-2px);
   border-color: #fcd34d; /* Yellow-300 border on hover */
-  color: #1e3a8a;; /* Yellow text on hover */
+  color: #1e3a8a; /* Yellow text on hover */
 }
 
 /*

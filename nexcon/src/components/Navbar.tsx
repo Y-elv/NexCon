@@ -1,49 +1,66 @@
-// components/Navbar.tsx
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Navbar.module.css"; // Import the CSS module
+import { useState } from "react";
+import { CiMenuBurger } from "react-icons/ci";
+import { SlClose } from "react-icons/sl";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => setMenuOpen((prev) => !prev);
+
   return (
-    <nav className={styles.mainNavbar}>
-      <div className={styles.innerContainer}>
-        {/* Logo and Ministry Name */}
+    <div className={styles.innerContainer}>
+      <div className={styles.logoContainer}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/favicon.ico" // <-- CORRECT PATH: It refers to public/favicon.ico
-            alt="Enihakkore International Ministry"
-            width={60} // Explicit width
-            height={60} // Explicit height
-            // Remove 'layout' and 'objectFit' as they are deprecated
-            // If you need object-fit behavior, apply it via CSS:
-            // style={{ objectFit: 'cover' }}
-            className={styles.logoImage} // Use module class
+            src="/favicon.ico"
+            alt="NexCon Logo"
+            width={50}
+            height={50}
+            className={styles.logoImage}
           />
           <span className={styles.ministryName}>
             Enihakkore International Ministry
           </span>
         </Link>
-        {/* Navigation Links */}
-        <div className={styles.linksContainer}>
-          {["Home", "About", "Services"].map((text) => (
-            <Link
-              key={text}
-              href={`/${
-                text.toLowerCase() === "home" ? "" : text.toLowerCase()
-              }`}
-              className={styles.navLink}
-            >
-              {text}
-            </Link>
-          ))}
-          {/* Support Button */}
-          <Link href="/support" className={styles.supportButton}>
-            Support
-          </Link>
-        </div>
       </div>
-    </nav>
+
+      {/* Desktop Nav */}
+      <div className={styles.navLink}>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/support">Support</Link>
+      </div>
+
+      {/* Hamburger Icon for Mobile */}
+      <button
+        className={styles.menuButton}
+        onClick={handleMenuToggle}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+      >
+        {menuOpen ? <SlClose size={28} /> : <CiMenuBurger size={28} />}
+      </button>
+
+      {/* Mobile Menu */}
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""}`}>
+        <Link href="/" onClick={handleMenuToggle}>
+          Home
+        </Link>
+        <Link href="/about" onClick={handleMenuToggle}>
+          About
+        </Link>
+        <Link href="/services" onClick={handleMenuToggle}>
+          Services
+        </Link>
+        <Link href="/support" onClick={handleMenuToggle}>
+          Support
+        </Link>
+      </div>
+    </div>
   );
 }

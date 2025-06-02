@@ -11,7 +11,10 @@
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
   padding-left: 2rem;
   padding-right: 2rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .logoContainer {
@@ -37,7 +40,12 @@
   display: block;
   margin-top: 0;
   margin-bottom: 0;
-  /* Ensure it's vertically centered */
+}
+
+/* Make sure the logo image is always centered vertically */
+.logoContainer,
+.logoLink {
+  height: 100%;
 }
 
 .ministryName {
@@ -62,13 +70,21 @@
 .navLink a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.18s;
+  transition: color 0.18s, background 0.18s;
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
 }
 
-.navLink a:hover {
-  background: rgba(255,255,255,0.07);
+/* Hover and Active styles - highlight with gold background and text */
+.navLink a:hover,
+.navLink .active,
+.navLink a.active {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffd700;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.07);
   color: #ffd700;
 }
 
@@ -83,6 +99,7 @@
   margin-left: 1rem;
 }
 
+/* Mobile Menu initial state */
 .mobileMenu {
   display: none;
 }
@@ -124,7 +141,7 @@
     right: 0;
     left: 0;
     background: linear-gradient(to right, #4f46e5, #1e3a8a, #5b21b6);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
     z-index: 100;
     padding: 1.2rem 0;
     gap: 1.5rem;
@@ -148,8 +165,16 @@
     border-radius: 5px;
     transition: background 0.18s, color 0.18s;
   }
-  .mobileMenu a:hover {
-    background: rgba(255,255,255,0.08);
+
+  .mobileMenu a:hover,
+  .mobileMenu .active,
+  .mobileMenu a.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffd700;
+  }
+
+  .active {
+    background: rgba(255, 255, 255, 0.08);
     color: #ffd700;
   }
 }

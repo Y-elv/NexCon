@@ -138,57 +138,8 @@
     }
   }
   
-  /* Our Team Section */
-  .teamSection {
-    margin: 2.5rem 0 2rem 0;
-    padding: 2rem 1rem;
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(31,41,55,0.06);
-    width: 100%;
-    max-width: 900px;
-  }
-  .teamGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 1.5rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .teamCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #f8fafc;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 6px rgba(31,41,55,0.03);
-    padding: 1.2rem;
-    width: 90%;
-    max-width: 260px;
-  }
-  .teamImage {
-    border-radius: 50%;
-    margin-bottom: 0.7rem;
-    object-fit: cover;
-  }
-  .teamCard h4 {
-    margin: 0.2rem 0 0.1rem 0;
-    color: #1e3a8a;
-    font-size: 1.09rem;
-  }
-  .teamCard p {
-    color: #6366f1;
-    font-size: 0.97rem;
-    margin-bottom: 0;
-  }
-  @media (min-width: 700px) {
-    .teamGrid {
-      flex-direction: row;
-      gap: 2.5rem;
-    }
-  }
-  
+
+
   /* 2. YouTube Card */
   .youtubeCard {
     background: linear-gradient(90deg, #e52d27 0%, #b31217 100%);
@@ -229,70 +180,6 @@
     background: #e52d27;
     color: #fff;
     box-shadow: 0 4px 14px rgba(229, 45, 39, 0.15);
-  }
-  
-  /* 3. Profile Card */
-  .profileCard {
-    margin: 2rem 0;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
-    border-radius: 1rem;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    outline: none;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .profileCard:focus,
-  .profileCard:hover {
-    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.18);
-    transform: translateY(-2px) scale(1.02);
-  }
-  
-  .profileImageWrapper {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1.2rem;
-    border: 4px solid #4f46e5;
-    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.13);
-  }
-  
-  .profileImage {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  
-  .profileName {
-    font-size: 1.45rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    color: #1e3a8a;
-  }
-  
-  .profileTitle {
-    font-size: 1rem;
-    color: #6366f1;
-    margin-bottom: 0.5rem;
-  }
-  
-  .profileContact {
-    font-size: 1.05rem;
-    color: #374151;
-  }
-  
-  .profileLink {
-    color: #4f46e5;
-    text-decoration: underline;
-    transition: color 0.2s;
-  }
-  .profileLink:hover {
-    color: #c09711;
   }
   
   /* 4. Address Section */
@@ -369,13 +256,10 @@
       font-size: 2rem;
     }
     .youtubeCard,
-    .profileCard,
     .addressCard,
     .missionSection,
     .beliefSection,
-    .teamSection {
-      padding: 1.2rem 0.7rem;
-    }
+
     .sectionTitle {
       font-size: 1.3rem;
     }

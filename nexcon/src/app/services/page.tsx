@@ -133,7 +133,7 @@ export default function ServicesPage() {
               }}
             />
             Contact us
-          </a>
+          </a>{" "}
           to find out how you can participate.
         </p>
         <ul className={styles.moreIdeasList}>

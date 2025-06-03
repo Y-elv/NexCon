@@ -247,6 +247,8 @@
   text-decoration: underline;
   font-weight: 600;
   transition: color 0.15s;
+  text-decoration: none;
+  
 }
 .moreContentLink:hover {
   color: #f59e42;

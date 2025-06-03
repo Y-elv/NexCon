@@ -1,0 +1,312 @@
+.servicesSection {
+  width: 93vw;
+  margin: 0 auto;
+  padding: 0rem 1.5rem 2.5rem 1.5rem;
+  min-height: 90vh;
+  background: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.2s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.servicesHeader {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1a202c;
+  letter-spacing: -1px;
+  animation: fadeIn 1s;
+}
+
+.servicesSubheading {
+  font-size: 1.23rem;
+  text-align: center;
+  color: #374151;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  animation: fadeIn 1.2s;
+}
+.cardsGrid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.2rem;
+  width: 100%;
+}
+.card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(31, 41, 55, 0.07);
+  padding: 2.2rem 1.3rem 1.8rem 1.3rem;
+  min-width: 240px;
+  max-width: 340px;
+  flex: 1 1 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.23s, transform 0.25s, background 0.18s;
+  opacity: 0;
+  animation: popIn 0.8s forwards;
+}
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.16);
+  background: #eef2ff;
+  transform: translateY(-5px) scale(1.03);
+}
+.cardIcon {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  border-radius: 100%;
+  padding: 0.8rem;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.07);
+}
+.cardTitle {
+  margin: 0.1rem 0 0.5rem 0;
+  color: #4f46e5;
+  font-size: 1.22rem;
+  font-weight: 700;
+}
+.cardDesc {
+  color: #374151;
+  font-size: 1.06rem;
+  line-height: 1.58;
+}
+/* Testimonies Carousel */
+.testimonySection {
+  width: 100%;
+  max-width: 980px;
+  margin: 2.5rem auto 1.7rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonyHeader {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 1.1rem;
+}
+.testimonyCarouselWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.carouselBtn {
+  border: none;
+
+  color: #4f46e5;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.08);
+  transition: background 0.18s, color 0.18s, transform 0.14s, box-shadow 0.18s;
+  outline: none;
+  border: 2px solid transparent;
+}
+.carouselBtn:hover,
+.carouselBtn:focus {
+  background: #6366f1;
+  color: #fff;
+  transform: scale(1.12) rotate(-8deg);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.18);
+}
+
+.testimonyCarousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+}
+.testimonyCarousel::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari and Opera */
+}
+.testimonyCard {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.1);
+  min-width: 260px;
+  max-width: 320px;
+  padding: 1.4rem 1.1rem 1.2rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.2s, background 0.18s;
+  position: relative;
+  cursor: pointer;
+}
+.testimonyCard:hover,
+.testimonyCard:focus-within {
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.18),
+    0 2px 10px rgba(79, 70, 229, 0.12);
+  transform: translateY(-8px) scale(1.04) rotate(-1.5deg);
+  background: linear-gradient(110deg, #f0fdfa 60%, #eef2ff 100%);
+}
+.testimonyImg {
+  border-radius: 1.1rem;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+  border: 3px solid #e0e7ff;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.11);
+  transition: border-color 0.18s, transform 0.18s;
+}
+.testimonyCard:hover .testimonyImg,
+.testimonyCard:focus-within .testimonyImg {
+  border-color: #4f46e5;
+  transform: scale(1.07) rotate(3deg);
+}
+.testimonyText {
+  font-style: italic;
+  color: #374151;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  transition: color 0.17s;
+}
+.testimonyCard:hover .testimonyText,
+.testimonyCard:focus-within .testimonyText {
+  color: #4f46e5;
+}
+.testimonyName {
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 600px) {
+  .testimonyCarousel {
+    min-width: 0;
+    max-width: 99vw;
+    gap: 0.7rem;
+  }
+  .testimonyCard {
+    min-width: 200px;
+    max-width: 92vw;
+    padding: 1rem 0.7rem 1.1rem 0.7rem;
+  }
+}
+/* More Content Ideas Section */
+.moreContent {
+  margin-top: 2.8rem;
+  padding: 2rem 1.2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+.moreContent h2 {
+  color: #4f46e5;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.moreContentLink {
+  color: #4f46e5;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.moreContentLink:hover {
+  color: #f59e42;
+}
+.moreIdeasList {
+  list-style: disc inside;
+  color: #64748b;
+  margin: 1.1rem 0 0.2rem 0;
+  text-align: left;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+  .cardsGrid,
+  .testimonyCarousel {
+    gap: 1.1rem;
+  }
+  .testimonySection {
+    max-width: 99vw;
+  }
+}
+@media (max-width: 900px) {
+  .cardsGrid {
+    gap: 1rem;
+  }
+  .card {
+    min-width: 180px;
+    max-width: 320px;
+    padding: 1.3rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .servicesSection {
+    padding: 2rem 0.5rem;
+  }
+  .servicesHeader {
+    font-size: 2rem;
+  }
+  .cardsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 96vw;
+    min-width: 0;
+    width: 100%;
+    padding: 1.1rem 0.7rem;
+  }
+  .testimonyCarousel {
+    min-width: 0;
+    max-width: 99vw;
+    gap: 0.7rem;
+  }
+  .testimonyCard {
+    min-width: 220px;
+    max-width: 96vw;
+  }
+  .moreContent {
+    padding: 1.1rem 0.4rem;
+    max-width: 99vw;
+  }
+}

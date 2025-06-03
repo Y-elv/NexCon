@@ -26,8 +26,8 @@
     max-width: 650px;
   }
   
-  /* Mission/Vision Section */
-  .missionSection {
+/* Mission/Vision Section */
+.missionSection {
     margin: 2.5rem 0 2rem 0;
     padding: 2rem 1rem;
     background: #fff;
@@ -35,12 +35,17 @@
     box-shadow: 0 2px 8px rgba(31,41,55,0.06);
     width: 100%;
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* add for horizontal center */
   }
+  
   .missionGrid {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-top: 1.5rem;
+    align-items: center; /* add for horizontal center */
   }
   .missionCard {
     background: #d8e8f9;
@@ -49,27 +54,22 @@
     box-shadow: 0 2px 6px rgba(31,41,55,0.03);
     text-align: center;
   }
-  .missionCard h3 {
-    color: #4f46e5;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  .missionCard p {
-    color: #374151;
-    font-size: 1.05rem;
-  }
+  
   @media (min-width: 700px) {
     .missionGrid {
       flex-direction: row;
       gap: 2rem;
+      align-items: stretch; /* for desktop alignment */
+      justify-content: center;
     }
     .missionCard {
       width: 50%;
+      max-width: 420px;
     }
   }
   
-    /* Beliefs Section */
-  .beliefSection {
+ /* Beliefs Section */
+.beliefSection {
     margin: 2.5rem 0 2rem 0;
     padding: 2rem 1rem;
     background: #fff;
@@ -77,14 +77,21 @@
     box-shadow: 0 2px 8px rgba(31,41,55,0.06);
     width: 100%;
     max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* ensures center text on all screens */
   }
+  
   .beliefCardGrid {
     display: flex;
     gap: 1.5rem;
     margin-top: 1.2rem;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center; /* vertical alignment */
   }
+  
   .beliefCard {
     background: #f8fafc;
     border-radius: 0.75rem;
@@ -97,19 +104,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    cursor: pointer;
   }
+  
+  .beliefCard:hover {
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.18);
+    background: #eef2ff;
+    transform: translateY(-3px) scale(1.03);
+  }
+  
   .beliefIcon {
     margin-bottom: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #eef2ff;
+    border-radius: 100%;
+    padding: 0.6rem;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.07);
   }
+  
   .beliefTitle {
     margin: 0.2rem 0 0.5rem 0;
     color: #4f46e5;
     font-size: 1.18rem;
     font-weight: 700;
   }
+  
   .beliefDesc {
     color: #374151;
     font-size: 1.02rem;
@@ -127,9 +149,13 @@
     }
   }
   @media (max-width: 600px) {
+    .beliefSection {
+      align-items: center;
+      text-align: center;
+    }
     .beliefCardGrid {
       flex-direction: column;
-      align-items: stretch;
+      align-items: center;
     }
     .beliefCard {
       max-width: 100%;
@@ -182,60 +208,81 @@
     box-shadow: 0 4px 14px rgba(229, 45, 39, 0.15);
   }
   
-  /* 4. Address Section */
+    /* 3. Address Section */
   .addressSection {
     width: 100%;
     margin-top: 2.5rem;
-  }
-  
-  .sectionTitle {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1.4rem;
-    color: #1a202c;
-  }
-  
-  .addressGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    justify-items: center !important;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
+  }
+  
+  .singleAddressCardWrapper {
+    display: flex;
     justify-content: center;
-    border: 1px solid seagreen;
+    align-items: center;
+    width: 100%;
   }
   
-  @media (min-width: 600px) {
-    .addressGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .addressCard {
+  .singleAddressCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
     background: #fff;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.09);
-    padding: 1.2rem 1.5rem;
-    min-width: 320px;
-    max-width: 480px;
-    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(31, 41, 55, 0.10);
+    padding: 2.2rem 2.6rem;
+    min-width: 840px;
+    max-width: 530px;
+    width: 100%;
     margin: 0 auto;
+    transition: box-shadow 0.25s, transform 0.2s, background 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
   }
   
-  .addressCard h4 {
-    font-size: 1.15rem;
+  .singleAddressCard:hover {
+    box-shadow: 0 6px 24px rgba(79, 70, 229, 0.17);
+    transform: translateY(-4px) scale(1.025);
+    background: #f4f7fd;
+    border-color: #4f46e5;
+  }
+  
+  .addressIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    border-radius: 100%;
+    padding: 0.7rem;
+    margin-top: 0.15rem;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.09);
+  }
+  
+  .addressCardTitle {
+    font-size: 1.22rem;
     font-weight: 700;
     color: #4f46e5;
     margin-bottom: 0.5rem;
   }
   
-  .addressCard address {
+  .addressCardAddress {
     font-style: normal;
     color: #374151;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     line-height: 1.7;
+  }
+  
+  @media (max-width: 700px) {
+    .singleAddressCard {
+      padding: 1.2rem 0.8rem;
+      min-width: 0;
+      max-width: 99vw;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.7rem;
+    }
   }
   
   /* 5. Map Section */

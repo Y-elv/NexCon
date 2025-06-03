@@ -6,6 +6,7 @@ import { RiCommunityFill } from "react-icons/ri";
 import { GiPrayer } from "react-icons/gi";
 import { BiSolidBible } from "react-icons/bi";
 import { FaCross } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
 import HeadOfMinistry from "@/components/HeadOfMinistry"; // Import the Head of Ministry component
 
 export default function AboutPage() {
@@ -55,7 +56,6 @@ export default function AboutPage() {
           </div>
           <div className={styles.beliefCard}>
             <span className={styles.beliefIcon} aria-label="Salvation">
-              {/* You can use another icon here if you like, for now use Bible icon as placeholder */}
               <FaCross size={44} color="#4f46e5" />
             </span>
             <h4 className={styles.beliefTitle}>Salvation</h4>
@@ -86,8 +86,10 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
       {/* Head of Ministry Section */}
       <HeadOfMinistry />
+
       {/* YouTube Channel CTA */}
       <div className={styles.youtubeCard}>
         <h2 className={styles.youtubeTitle}>Watch Our YouTube Channel</h2>
@@ -107,29 +109,25 @@ export default function AboutPage() {
       {/* Address Section */}
       <div className={styles.addressSection}>
         <h2 className={styles.sectionTitle}>Our Location</h2>
-        <div className={styles.addressGrid}>
-          <div className={styles.addressCard}>
-            <h4>Headquarters</h4>
-            <address>
-              123 Faith Avenue,
-              <br />
-              City of Hope, State 45678
-              <br />
-              Country
-            </address>
-          </div>
-          <div className={styles.addressCard}>
-            <h4>Branch Office</h4>
-            <address>
-              456 Hope Street,
-              <br />
-              Grace Town, State 12345
-              <br />
-              Country
-            </address>
+        <div className={styles.singleAddressCardWrapper}>
+          <div className={styles.singleAddressCard}>
+            <span className={styles.addressIcon}>
+              <MdLocationOn size={38} color="#4f46e5" />
+            </span>
+            <div>
+              <h4 className={styles.addressCardTitle}>Headquarters</h4>
+              <address className={styles.addressCardAddress}>
+                123 Faith Avenue,
+                <br />
+                City of Hope, State 45678
+                <br />
+                Country
+              </address>
+            </div>
           </div>
         </div>
       </div>
+      
       {/* Map Section */}
       <div className={styles.mapSection}>
         <iframe

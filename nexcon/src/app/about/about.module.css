@@ -1,0 +1,391 @@
+/* 1. About Section */
+.aboutSection {
+    width: 95vw;
+    margin: 0 auto;
+    padding: 0rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f4f8;
+  }
+  
+  /* Title & Description */
+  .aboutHeading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1a202c;
+  }
+  
+  .aboutSubheading {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #374151;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+  }
+  
+  /* Mission/Vision Section */
+  .missionSection {
+    margin: 2.5rem 0 2rem 0;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(31,41,55,0.06);
+    width: 100%;
+    max-width: 900px;
+  }
+  .missionGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .missionCard {
+    background: #d8e8f9;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(31,41,55,0.03);
+    text-align: center;
+  }
+  .missionCard h3 {
+    color: #4f46e5;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .missionCard p {
+    color: #374151;
+    font-size: 1.05rem;
+  }
+  @media (min-width: 700px) {
+    .missionGrid {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    .missionCard {
+      width: 50%;
+    }
+  }
+  
+    /* Beliefs Section */
+  .beliefSection {
+    margin: 2.5rem 0 2rem 0;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(31,41,55,0.06);
+    width: 100%;
+    max-width: 1000px;
+  }
+  .beliefCardGrid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .beliefCard {
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(31,41,55,0.03);
+    padding: 1.5rem 1.2rem;
+    min-width: 200px;
+    max-width: 230px;
+    flex: 1 1 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .beliefIcon {
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .beliefTitle {
+    margin: 0.2rem 0 0.5rem 0;
+    color: #4f46e5;
+    font-size: 1.18rem;
+    font-weight: 700;
+  }
+  .beliefDesc {
+    color: #374151;
+    font-size: 1.02rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 900px) {
+    .beliefCardGrid {
+      gap: 1rem;
+    }
+    .beliefCard {
+      min-width: 160px;
+      max-width: 220px;
+      padding: 1rem 0.7rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .beliefCardGrid {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .beliefCard {
+      max-width: 100%;
+      min-width: 0;
+      width: 100%;
+    }
+  }
+  
+  /* Our Team Section */
+  .teamSection {
+    margin: 2.5rem 0 2rem 0;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(31,41,55,0.06);
+    width: 100%;
+    max-width: 900px;
+  }
+  .teamGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .teamCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(31,41,55,0.03);
+    padding: 1.2rem;
+    width: 90%;
+    max-width: 260px;
+  }
+  .teamImage {
+    border-radius: 50%;
+    margin-bottom: 0.7rem;
+    object-fit: cover;
+  }
+  .teamCard h4 {
+    margin: 0.2rem 0 0.1rem 0;
+    color: #1e3a8a;
+    font-size: 1.09rem;
+  }
+  .teamCard p {
+    color: #6366f1;
+    font-size: 0.97rem;
+    margin-bottom: 0;
+  }
+  @media (min-width: 700px) {
+    .teamGrid {
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+  }
+  
+  /* 2. YouTube Card */
+  .youtubeCard {
+    background: linear-gradient(90deg, #e52d27 0%, #b31217 100%);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 16px rgba(229, 45, 39, 0.12);
+  }
+  
+  .youtubeTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  
+  .youtubeDescription {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+  }
+  
+  .youtubeButton {
+    display: inline-block;
+    background: #fff;
+    color: #e52d27;
+    font-weight: 700;
+    padding: 0.85rem 2.2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(229, 45, 39, 0.07);
+  }
+  
+  .youtubeButton:hover {
+    background: #e52d27;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(229, 45, 39, 0.15);
+  }
+  
+  /* 3. Profile Card */
+  .profileCard {
+    margin: 2rem 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .profileCard:focus,
+  .profileCard:hover {
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.18);
+    transform: translateY(-2px) scale(1.02);
+  }
+  
+  .profileImageWrapper {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.2rem;
+    border: 4px solid #4f46e5;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.13);
+  }
+  
+  .profileImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .profileName {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #1e3a8a;
+  }
+  
+  .profileTitle {
+    font-size: 1rem;
+    color: #6366f1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profileContact {
+    font-size: 1.05rem;
+    color: #374151;
+  }
+  
+  .profileLink {
+    color: #4f46e5;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  .profileLink:hover {
+    color: #c09711;
+  }
+  
+  /* 4. Address Section */
+  .addressSection {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    color: #1a202c;
+  }
+  
+  .addressGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center !important;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid seagreen;
+  }
+  
+  @media (min-width: 600px) {
+    .addressGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .addressCard {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.09);
+    padding: 1.2rem 1.5rem;
+    min-width: 320px;
+    max-width: 480px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .addressCard h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .addressCard address {
+    font-style: normal;
+    color: #374151;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  
+  /* 5. Map Section */
+  .mapSection {
+    width: 100%;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(55, 65, 81, 0.13);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .aboutSection {
+      padding: 2rem 0.5rem;
+    }
+    .aboutHeading {
+      font-size: 2rem;
+    }
+    .youtubeCard,
+    .profileCard,
+    .addressCard,
+    .missionSection,
+    .beliefSection,
+    .teamSection {
+      padding: 1.2rem 0.7rem;
+    }
+    .sectionTitle {
+      font-size: 1.3rem;
+    }
+    .missionCard,
+    .teamCard {
+      width: 100%;
+      max-width: 100%;
+    }
+    .beliefList {
+      margin-left: 0.3rem;
+      font-size: 1rem;
+    }
+  }

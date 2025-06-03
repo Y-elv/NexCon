@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./about.module.css";
 import { RiCommunityFill } from "react-icons/ri";
@@ -127,7 +126,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      
+
       {/* Map Section */}
       <div className={styles.mapSection}>
         <iframe

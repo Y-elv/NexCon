@@ -1,6 +1,6 @@
 "use client";
 import styles from "./service.module.css";
-import { FaHandsHelping, FaBible, FaHandHoldingHeart } from "react-icons/fa";
+import { FaBible, FaHandHoldingHeart } from "react-icons/fa";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import { MdEmojiObjects } from "react-icons/md";
 import { FaRegHandPointRight } from "react-icons/fa"; 

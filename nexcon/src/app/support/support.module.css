@@ -1,0 +1,225 @@
+.supportSection {
+    width: 95vw;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 0rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f4f8;
+  }
+  
+  .supportHeading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1a202c;
+  }
+  
+  .supportSubheading {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #374151;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+  }
+  
+  .highlight {
+    color: #4f46e5;
+    font-weight: 700;
+  }
+  
+  .cardsGrid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    width: 100%;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px rgba(31,41,55,0.08);
+    padding: 1.8rem 1.2rem 1.4rem 1.2rem;
+    min-width: 240px;
+    max-width: 320px;
+    flex: 1 1 240px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    cursor: pointer;
+  }
+  .card:hover {
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.18);
+    background: #eef2ff;
+    transform: translateY(-3px) scale(1.03);
+  }
+  .cardIconPhone {
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+  }
+  .cardIconBank {
+    color: #8b5cf6;
+    margin-bottom: 0.5rem;
+  }
+  .cardTitle {
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #4f46e5;
+  }
+  .cardLabel {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 0.2rem;
+  }
+  .cardCode {
+    background: #fff;
+    color: #4f46e5;
+    font-family: monospace;
+    font-size: 1.1rem;
+    border-radius: 0.6rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.07);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    user-select: all;
+  }
+  .cardImage {
+    border-radius: 0.3rem;   
+    box-shadow: 0 2px 8px rgba(31,41,55,0.10);
+    margin-bottom: 0.3rem;
+    width: 120px !important;
+    height: 64px !important;
+    object-fit: cover;
+  }
+  .cardNote {
+    color: #64748b;
+    font-size: 0.93rem;
+    margin-top: 0.2rem;
+  }
+  
+  .contactBox {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    background: linear-gradient(90deg, #f5f3ff 0%, #e0e7ff 100%);
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.07);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .contactTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 0.7rem;
+  }
+  .contactLinks {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+  }
+  .contactLinkPhone {
+    background: #dbeafe;
+    color: #2563eb;
+    border-radius: 0.7rem;
+    padding: 0.65rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(59,130,246,0.05);
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s;
+  }
+  .contactLinkPhone:hover {
+    background: #a5b4fc;
+    color: #fff;
+  }
+  .contactLinkEmail {
+    background: #ddd6fe;
+    color: #7c3aed;
+    border-radius: 0.7rem;
+    padding: 0.65rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(124,58,237,0.05);
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s;
+  }
+  .contactLinkEmail:hover {
+    background: #a5b4fc;
+    color: #fff;
+  }
+  .contactIcon {
+    font-size: 1.2em;
+  }
+  .contactText {
+    font-size: 0.97rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+  }
+  
+  .gratitudeNote {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.96rem;
+    margin-top: 2.5rem;
+    max-width: 530px;
+    background: #f1f5f9;
+    border-radius: 0.8rem;
+    padding: 1.2rem 1rem;
+  }
+  
+  @media (max-width: 900px) {
+    .cardsGrid {
+      gap: 1rem;
+    }
+    .card {
+      min-width: 180px;
+      max-width: 320px;
+      padding: 1.3rem 0.7rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .supportSection {
+      padding: 2rem 0.5rem;
+    }
+    .supportHeading {
+      font-size: 2rem;
+    }
+    .cardsGrid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      max-width: 98vw;
+      min-width: 0;
+      width: 100%;
+      padding: 1.3rem 0.8rem;
+    }
+    .contactBox {
+      padding: 1.1rem 0.5rem 0.9rem 0.5rem;
+    }
+    .gratitudeNote {
+      font-size: 0.93rem;
+      padding: 0.7rem 0.4rem;
+    }
+  }

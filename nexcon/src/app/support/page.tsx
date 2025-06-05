@@ -52,11 +52,14 @@ export default function SupportPage() {
       </div>
       {/* Contact Section */}
       <div className={styles.contactBox}>
-        <h2 className={styles.contactTitle}>Need Help? Contact Us</h2>
+        <h2 className={styles.contactTitle}>Contact Us</h2>
         <div className={styles.contactLinks}>
-          <a href="tel:+250788123456" className={styles.contactLinkPhone}>
+          <a
+            href="tel:+250784372611"
+            className={styles.contactLinkPhone}
+          >
             <FaPhoneVolume className={styles.contactIcon} />
-            +250 788 123 456
+            +250 784 372 611
           </a>
           <a
             href="mailto:support@nexcon.org"

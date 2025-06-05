@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./HeadOfMinistry.module.css"; 
+import styles from "./HeadOfMinistry.module.css";
 import { MdEmail, MdPhone } from "react-icons/md";
 import { FaQuoteLeft } from "react-icons/fa";
 
@@ -11,7 +11,7 @@ export default function HeadOfMinistry() {
       <div className={styles.headMinistryCard}>
         <div className={styles.headMinistryAvatarWrapper}>
           <Image
-            src="/assets/profileAvatar.jpg"
+            src="/assets/pastor-jose.png" // Replace with the actual path to the avatar image
             alt="Rev. Grace Emmanuel"
             width={120}
             height={120}
@@ -20,7 +20,7 @@ export default function HeadOfMinistry() {
           />
         </div>
         <div className={styles.headMinistryDetails}>
-          <h3 className={styles.headMinistryName}>Rev. Grace Emmanuel</h3>
+          <h3 className={styles.headMinistryName}>Pastor . Joselyn Mutoni</h3>
           <p className={styles.headMinistryTitle}>Head Pastor & Founder</p>
           <div className={styles.headMinistryContact}>
             <a
@@ -32,8 +32,8 @@ export default function HeadOfMinistry() {
             </a>
             <span className={styles.headMinistryContactDivider}>|</span>
             <a href="tel:+1234567890" className={styles.headMinistryLink}>
-              <MdPhone size={20} style={{ verticalAlign: "middle" }} /> +1 234
-              567 890
+              <MdPhone size={20} style={{ verticalAlign: "middle" }} /> +250 784
+              372 611
             </a>
           </div>
           <blockquote className={styles.headMinistryInsight}>

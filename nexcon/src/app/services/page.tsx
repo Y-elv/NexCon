@@ -86,7 +86,7 @@ export default function ServicesPage() {
 
       {/* Testimonies Carousel */}
       <div className={styles.testimonySection}>
-        <h2 className={styles.testimonyHeader}>What People Are Saying</h2>
+        <h2 className={styles.testimonyHeader}>Testimonials</h2>
         <div className={styles.testimonyCarouselWrapper}>
           <button
             className={styles.carouselBtn}

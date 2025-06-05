@@ -19,21 +19,21 @@ export default function AboutPage() {
       </p>
       {/* Mission/Vision Section */}
       <div className={styles.missionSection}>
-        <h2 className={styles.sectionTitle}>Our Mission & Vision</h2>
+        <h2 className={styles.sectionTitle}>Our Vision & Mission</h2>
         <div className={styles.missionGrid}>
+          <div className={styles.missionCard}>
+            <h3>Our Vision</h3>
+            <p>
+              To see communities transformed by the power of the Gospel, where
+              love, compassion, and justice prevail, creating a global impact.
+            </p>
+          </div>
           <div className={styles.missionCard}>
             <h3>Our Mission</h3>
             <p>
               To lead individuals into a deeper relationship with God, fostering
               spiritual growth and personal development through the teachings of
               Christ.
-            </p>
-          </div>
-          <div className={styles.missionCard}>
-            <h3>Our Vision</h3>
-            <p>
-              To see communities transformed by the power of the Gospel, where
-              love, compassion, and justice prevail, creating a global impact.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
           Stay inspired with messages, worship sessions, and ministry updates.
         </p>
         <Link
-          href="https://youtube.com/@YOUR_CHANNEL" // <-- Replace with your channel URL
+          href="https://www.youtube.com/@PastorMutoniMinistries"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.youtubeButton}
@@ -116,11 +116,11 @@ export default function AboutPage() {
             <div>
               <h4 className={styles.addressCardTitle}>Headquarters</h4>
               <address className={styles.addressCardAddress}>
-                123 Faith Avenue,
+                Nyabugogo 
                 <br />
-                City of Hope, State 45678
+                City of Kigali
                 <br />
-                Country
+                Rwanda
               </address>
             </div>
           </div>

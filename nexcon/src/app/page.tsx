@@ -39,21 +39,21 @@ export default function HomePage() {
 
       {/* Mission/Vision Section */}
       <section className={styles.missionSection}>
-        <h2 className={styles.sectionTitle}>Our Mission & Vision</h2>
+        <h2 className={styles.sectionTitle}>Our Vision & Mission</h2>
         <div className={styles.missionGrid}>
+          <div className={styles.missionCard}>
+            <h3>Our Vision</h3>
+            <p>
+              To see communities transformed by the power of the Gospel, where
+              love, compassion, and justice prevail, creating a global impact.
+            </p>
+          </div>
           <div className={styles.missionCard}>
             <h3>Our Mission</h3>
             <p>
               To lead individuals into a deeper relationship with God, fostering
               spiritual growth and personal development through the teachings of
               Christ.
-            </p>
-          </div>
-          <div className={styles.missionCard}>
-            <h3>Our Vision</h3>
-            <p>
-              To see communities transformed by the power of the Gospel, where
-              love, compassion, and justice prevail, creating a global impact.
             </p>
           </div>
         </div>
@@ -85,26 +85,17 @@ export default function HomePage() {
           </div>
           <div className={styles.serviceCard}>
             <h3 className={styles.serviceCardTitle}>
-              Discipleship & Education
+              Youth Discipleship & Education
             </h3>
             <p className={styles.serviceCardDescription}>
               Grow in faith through our Bible studies, workshops, and
-              educational programs for all ages.
+              educational programs for men, women, youth, and children of all
+              ages.
             </p>
             <Link
               href="/services#discipleship"
               className={styles.serviceCardLink}
             >
-              Learn More
-            </Link>
-          </div>
-          <div className={styles.serviceCard}>
-            <h3 className={styles.serviceCardTitle}>Youth Programs</h3>
-            <p className={styles.serviceCardDescription}>
-              Nurturing the next generation with values, leadership skills, and
-              spiritual guidance.
-            </p>
-            <Link href="/services#youth" className={styles.serviceCardLink}>
               Learn More
             </Link>
           </div>

@@ -12,7 +12,7 @@ export default function HeadOfMinistry() {
         <div className={styles.headMinistryAvatarWrapper}>
           <Image
             src="/assets/pastor-jose.png" // Replace with the actual path to the avatar image
-            alt="Rev. Grace Emmanuel"
+            alt="Pastor . Joselyn Mutoni"
             width={120}
             height={120}
             className={styles.headMinistryAvatar}
@@ -24,14 +24,17 @@ export default function HeadOfMinistry() {
           <p className={styles.headMinistryTitle}>Head Pastor & Founder</p>
           <div className={styles.headMinistryContact}>
             <a
-              href="mailto:head@ministry.org"
+              href="mailto:pastmutoniministry@gmail.com"
               className={styles.headMinistryLink}
             >
               <MdEmail size={20} style={{ verticalAlign: "middle" }} />{" "}
-              head@ministry.org
+              pastmutoniministry@gmail.com
             </a>
             <span className={styles.headMinistryContactDivider}>|</span>
-            <a href="tel:+1234567890" className={styles.headMinistryLink}>
+            <a
+              href="tel:+250 784372 611"
+              className={styles.headMinistryLink}
+            >
               <MdPhone size={20} style={{ verticalAlign: "middle" }} /> +250 784
               372 611
             </a>

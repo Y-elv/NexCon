@@ -59,11 +59,11 @@ export default function SupportPage() {
             +250 784 372 611
           </a>
           <a
-            href="mailto:support@nexcon.org"
+            href="mailto:pastmutoniministry@gmail.com"
             className={styles.contactLinkEmail}
           >
             <MdOutlineEmail className={styles.contactIcon} />
-            support@nexcon.org
+            pastmutoniministry@gmail.com
           </a>
         </div>
         <p className={styles.contactText}>

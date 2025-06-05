@@ -22,7 +22,7 @@ export default function SupportPage() {
           <IoIosPhonePortrait size={36} className={styles.cardIconPhone} />
           <h3 className={styles.cardTitle}>Send via MoMo</h3>
           <p className={styles.cardLabel}>Dial this code:</p>
-          <div className={styles.cardCode}>*182*8*1*232323#</div>
+          <div className={styles.cardCode}>*182*8*1*0794438069#</div>
           <Image
             src="/assets/mtn-momo.jpg"
             alt="MoMo"
@@ -38,26 +38,23 @@ export default function SupportPage() {
           <BsBank size={36} className={styles.cardIconBank} />
           <h3 className={styles.cardTitle}>Bank Transfer</h3>
           <p className={styles.cardLabel}>Account Number:</p>
-          <div className={styles.cardCode}>2225555533</div>
+          <div className={styles.cardCode}>4003100468160</div>
           <Image
-            src="/assets/BK-1.png"
+            src="/assets/equity.png"
             alt="Bank of Kigali"
             width={64}
             height={64}
             className={styles.cardImage}
             priority
           />
-          <span className={styles.cardNote}>Bank of Kigali</span>
+          <span className={styles.cardNote}>Equity Bank</span>
         </div>
       </div>
       {/* Contact Section */}
       <div className={styles.contactBox}>
         <h2 className={styles.contactTitle}>Contact Us</h2>
         <div className={styles.contactLinks}>
-          <a
-            href="tel:+250784372611"
-            className={styles.contactLinkPhone}
-          >
+          <a href="tel:+250784372611" className={styles.contactLinkPhone}>
             <FaPhoneVolume className={styles.contactIcon} />
             +250 784 372 611
           </a>

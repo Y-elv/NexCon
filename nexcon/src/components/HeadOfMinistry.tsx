@@ -20,7 +20,7 @@ export default function HeadOfMinistry() {
           />
         </div>
         <div className={styles.headMinistryDetails}>
-          <h3 className={styles.headMinistryName}>Pastor . Joselyn Mutoni</h3>
+          <h3 className={styles.headMinistryName}>Pastor . Joselyne Mutoni</h3>
           <p className={styles.headMinistryTitle}>Head Pastor & Founder</p>
           <div className={styles.headMinistryContact}>
             <a

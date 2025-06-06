@@ -38,6 +38,7 @@
   max-width: 700px;
   animation: fadeIn 1.2s;
 }
+
 .cardsGrid {
   display: flex;
   gap: 2rem;

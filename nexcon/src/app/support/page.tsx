@@ -23,6 +23,8 @@ export default function SupportPage() {
           <h3 className={styles.cardTitle}>Send via MoMo</h3>
           <p className={styles.cardLabel}>Dial this code:</p>
           <div className={styles.cardCode}>*182*8*1*0794438069#</div>
+          <div className={styles.cardName}>Joselyne Mutoni</div>{" "}
+          {/* Add this line */}
           <Image
             src="/assets/mtn-momo.jpg"
             alt="MoMo"
@@ -39,6 +41,8 @@ export default function SupportPage() {
           <h3 className={styles.cardTitle}>Bank Transfer</h3>
           <p className={styles.cardLabel}>Account Number:</p>
           <div className={styles.cardCode}>4003100468160</div>
+          <div className={styles.cardName}>Joselyne Mutoni</div>{" "}
+          {/* Add this line */}
           <Image
             src="/assets/equity.png"
             alt="Bank of Kigali"

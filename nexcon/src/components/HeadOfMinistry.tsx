@@ -12,7 +12,7 @@ export default function HeadOfMinistry() {
         <div className={styles.headMinistryAvatarWrapper}>
           <Image
             src="/assets/pastor-jose.png" // Replace with the actual path to the avatar image
-            alt="Pastor . Joselyn Mutoni"
+            alt="Pastor . Joselyne Mutoni"
             width={120}
             height={120}
             className={styles.headMinistryAvatar}

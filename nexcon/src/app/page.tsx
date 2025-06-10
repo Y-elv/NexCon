@@ -1,31 +1,63 @@
 // app/page.tsx
 // This component is a Server Component by default, unless client-side interactions are added.
+"use client";
 import Image from "next/image"; // Import Image component for optimized images
 import Link from "next/link"; // Import Link for internal navigation
 import styles from "./page.module.css"; // Import the CSS module
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
+  const slides = [
+    {
+      image: "/assets/bg-ministry1.jpg",
+      heading: "Centered on the Cross",
+      subheading: "Our faith begins and ends at the finished work of Jesus.",
+    },
+    {
+      image: "/assets/bg-ministry2.jpg",
+      heading: "Alive in Praise and Worship",
+      subheading:
+        "Join a vibrant community celebrating God’s presence together.",
+    },
+    {
+      image: "/assets/bg-ministry3.jpg",
+      heading: "United in the Word",
+      subheading: "We grow together as we hold fast to God’s Word.",
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 6000); // 6 seconds
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
       <section className={styles.heroSection}>
-        <Image
-          src="/favicon.ico" // Path to your hero image
-          alt="Enihakkore International Ministry"
-          layout="fill" // Makes the image fill the parent container
-          objectFit="cover" // Covers the section while maintaining aspect ratio
-          quality={90} // Image quality
-          priority // Prioritize loading for LCP (Largest Contentful Paint)
-          className={styles.heroImage}
-        />
+        {/* Image slider */}
+        {slides.map((slide, idx) => (
+          <Image
+            key={slide.image}
+            src={slide.image}
+            alt={slide.heading}
+            layout="fill"
+            objectFit="cover"
+            quality={90}
+            priority={idx === 0}
+            className={`${styles.heroImage} ${
+              idx === current ? styles.active : styles.inactive
+            }`}
+          />
+        ))}
+        {/* Content transitions with slide */}
         <div className={styles.heroContent}>
-          <h1 className={styles.heroHeading}>
-            Empowering Lives, Spreading Hope
-          </h1>
-          <p className={styles.heroSubheading}>
-            Enihakkore International Ministry is dedicated to transforming
-            communities through faith, service, and love.
-          </p>
+          <h1 className={styles.heroHeading}>{slides[current].heading}</h1>
+          <p className={styles.heroSubheading}>{slides[current].subheading}</p>
           <div className={styles.heroCtaGroup}>
             <Link href="/about" className={styles.heroCtaPrimary}>
               Learn More About Us
@@ -33,6 +65,22 @@ export default function HomePage() {
             <Link href="/services" className={styles.heroCtaSecondary}>
               Explore Our Services
             </Link>
+          </div>
+          {/* Optional: Add slide indicators */}
+          <div className={styles.heroIndicators}>
+            {slides.map((_, idx) => (
+              <button
+                key={idx}
+                className={
+                  idx === current
+                    ? styles.heroIndicatorActive
+                    : styles.heroIndicator
+                }
+                onClick={() => setCurrent(idx)}
+                aria-label={`Show slide ${idx + 1}`}
+                type="button"
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -74,8 +122,7 @@ export default function HomePage() {
             />
             <div className={styles.youtubeCardContent}>
               <span className={styles.youtubeCardTitle}>
-                Amagambo akomeye ku bamenyera Imana – Pastor .
-                Joselyne Mutoni
+                Amagambo akomeye ku bamenyera Imana – Pastor . Joselyne Mutoni
               </span>
             </div>
           </a>
@@ -93,8 +140,8 @@ export default function HomePage() {
             />
             <div className={styles.youtubeCardContent}>
               <span className={styles.youtubeCardTitle}>
-                Amagambo akomeye ku bamenyera Imana Part 2 –
-                Pastor . Joselyne Mutoni
+                Amagambo akomeye ku bamenyera Imana Part 2 – Pastor . Joselyne
+                Mutoni
               </span>
             </div>
           </a>

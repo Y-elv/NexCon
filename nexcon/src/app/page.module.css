@@ -6,89 +6,140 @@
    -------------------------------------------------------------------
 */
 .heroSection {
-  position: relative; /* Needed for Image layout="fill" */
-  height: 100vh; /* Adjust as needed */
+  position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white; /* Default text color for hero content */
+  color: white;
   overflow: hidden;
-  overflow-x: hidden;
-  border: 1px solid green; /* Prevents layout shift on hover */
-   /* Ensures image doesn't overflow */
 }
 
 .heroImage {
-  z-index: 0; /* Place image behind content */
-  filter: brightness(68%); /* Darken the image slightly for text readability */
+  z-index: 0;
+  filter: brightness(68%);
+  position: absolute !important;
+  top: 0; left: 0; width: 100% !important; height: 100% !important;
+  opacity: 0;
+  transition: opacity 1.1s cubic-bezier(.43,.13,.23,1);
+  pointer-events: none;
+}
+.heroImage.active {
+  opacity: 1;
+  z-index: 0;
+}
+.heroImage.inactive {
+  opacity: 0;
+  z-index: 0;
 }
 
 .heroContent {
-  position: relative; /* Bring content above the image */
+  position: relative;
   z-index: 1;
-  max-width: 900px; /* Constrain content width */
-  padding: 0 1.5rem; /* Horizontal padding */
+  max-width: 900px;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
 .heroHeading {
-  font-size: 3.5rem; /* Large heading */
-  font-weight: 800; /* Extra bold */
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
+  transition: all .6s cubic-bezier(.43,.13,.23,1);
 }
 
 .heroSubheading {
-  font-size: 1.5rem; /* Larger subheading */
-  font-weight: 300; /* Lighter font weight */
+  font-size: 1.5rem;
+  font-weight: 300;
   margin-bottom: 2.5rem;
   opacity: 0.9;
+  transition: all .6s cubic-bezier(.43,.13,.23,1);
 }
 
 .heroCtaGroup {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* Space between buttons */
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .heroCtaPrimary {
-  /* Using the primary blue color for the main CTA */
-  background-color: #1e3a8a; /* A strong blue from your footer gradient */
-  color: #f6da7e; /* White text on blue background */
+  background-color: #1e3a8a;
+  color: #f6da7e;
   padding: 1rem 2rem;
-  border-radius: 9999px; /* Fully rounded */
+  border-radius: 9999px;
   font-weight: 700;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
-
 .heroCtaPrimary:hover {
-  background-color: #c09711; /* A slightly lighter blue/indigo on hover */
+  background-color: #c09711;
   transform: translateY(-2px);
-  color: #1e3a8a; /* Dark text on hover */
+  color: #1e3a8a;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
-
 .heroCtaSecondary {
   background-color: transparent;
   color: white;
-  border: 2px solid #1e3a8a; /* White border */
+  border: 2px solid #1e3a8a;
   padding: 1rem 2rem;
   border-radius: 9999px;
   font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    border-color 0.3s ease, color 0.3s ease; /* Added color to transition */
-  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, transform 0.3s,
+    border-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+.heroCtaSecondary:hover {
+  transform: translateY(-2px);
+  border-color: #fcd34d;
+  color: #1e3a8a;
 }
 
-.heroCtaSecondary:hover {
-  /* Slightly transparent white background */
-  transform: translateY(-2px);
-  border-color: #fcd34d; /* Yellow-300 border on hover */
-  color: #1e3a8a; /* Yellow text on hover */
+/* Slide indicators */
+.heroIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.heroIndicator,
+.heroIndicatorActive {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  outline: none;
+}
+.heroIndicatorActive {
+  background: #f6da7e;
+  border-color: #f6da7e;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .heroHeading {
+    font-size: 2.2rem;
+  }
+  .heroSubheading {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .heroSection {
+    height: 64vh;
+  }
+  .heroHeading {
+    font-size: 1.35rem;
+  }
+  .heroSubheading {
+    font-size: 0.97rem;
+  }
 }
 
 /*
@@ -104,6 +155,7 @@
   color: #1a202c; /* Dark text */
   padding-top: 2rem; /* Add some space above the section title */
 }
+
 
 /* ------------------------------
   2. Previous Preachers (YouTube) Section

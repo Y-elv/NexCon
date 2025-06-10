@@ -37,6 +37,78 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Previous Preachers Section */}
+      <section className={styles.youtubeSection}>
+        <h2 className={styles.youtubeTitle}>Previous Preachers</h2>
+        <div className={styles.youtubeCardList}>
+          {/* Card 1 */}
+          <a
+            href="https://www.youtube.com/watch?v=XKAr699zMg0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.youtubeCard}
+          >
+            <img
+              src="/assets/youtube1.png" // Replace with actual thumbnail URL
+              alt="REV EDOUARD NDORIMBANA NA PASTOR UMUTONI BATI NIGUTE URUBYIRUKO RWAKWIYEGURIRA IMANA? – Pastor . Joselyne Mutoni"
+              className={styles.youtubeThumbnail}
+            />
+            <div className={styles.youtubeCardContent}>
+              <span className={styles.youtubeCardTitle}>
+                BATI NIGUTE URUBYIRUKO RWAKWIYEGURIRA IMANA? – Pastor . Joselyne
+                Mutoni
+              </span>
+            </div>
+          </a>
+          {/* Card 2 */}
+          <a
+            href="https://www.youtube.com/watch?v=aMfrhGYhixg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.youtubeCard}
+          >
+            <img
+              src="/assets/youtube2.png"
+              alt="Walking in Love – Pastor . Joselyne Mutoni"
+              className={styles.youtubeThumbnail}
+            />
+            <div className={styles.youtubeCardContent}>
+              <span className={styles.youtubeCardTitle}>
+                Amagambo akomeye ku bamenyera Imana – Pastor .
+                Joselyne Mutoni
+              </span>
+            </div>
+          </a>
+          {/* Card 3 */}
+          <a
+            href="https://www.youtube.com/watch?v=vJEBtrb5kX0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.youtubeCard}
+          >
+            <img
+              src="/assets/youtube3.png"
+              alt="Hope for Tomorrow – Pastor . Joselyne Mutoni"
+              className={styles.youtubeThumbnail}
+            />
+            <div className={styles.youtubeCardContent}>
+              <span className={styles.youtubeCardTitle}>
+                Amagambo akomeye ku bamenyera Imana Part 2 –
+                Pastor . Joselyne Mutoni
+              </span>
+            </div>
+          </a>
+        </div>
+        <a
+          href="https://www.youtube.com/@PastorMutoniMinistries"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.youtubeButton}
+        >
+          Watch More on our YouTube Channel
+        </a>
+      </section>
+
       {/* Mission/Vision Section */}
       <section className={styles.missionSection}>
         <h2 className={styles.sectionTitle}>Our Vision & Mission</h2>

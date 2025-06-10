@@ -55,7 +55,7 @@ export default function HomePage() {
             />
             <div className={styles.youtubeCardContent}>
               <span className={styles.youtubeCardTitle}>
-                BATI NIGUTE URUBYIRUKO RWAKWIYEGURIRA IMANA? – Pastor . Joselyne
+                Bati nigute urubyiruko rwakwegera Imana? – Pastor . Joselyne
                 Mutoni
               </span>
             </div>

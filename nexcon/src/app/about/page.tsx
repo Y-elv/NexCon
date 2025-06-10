@@ -116,7 +116,7 @@ export default function AboutPage() {
             <div>
               <h4 className={styles.addressCardTitle}>Headquarters</h4>
               <address className={styles.addressCardAddress}>
-                Nyabugogo 
+                Nyabugogo
                 <br />
                 City of Kigali
                 <br />
@@ -131,7 +131,7 @@ export default function AboutPage() {
       <div className={styles.mapSection}>
         <iframe
           title="Enihakkore Ministry Map"
-          src="https://www.google.com/maps?q=123+Faith+Avenue+City+of+Hope+45678&output=embed"
+          src="https://www.google.com/maps?q=Nyabugogo,+Kigali,+Rwanda&output=embed"
           width="100%"
           height="350"
           style={{ border: 0, borderRadius: "1rem" }}

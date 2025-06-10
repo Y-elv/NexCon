@@ -5,6 +5,7 @@ import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import { MdEmojiObjects } from "react-icons/md";
 import { FaRegHandPointRight } from "react-icons/fa"; 
 import { useRef } from "react";
+import { text } from "stream/consumers";
 
 const services = [
   {
@@ -41,8 +42,8 @@ const testimonies = [
     img: "/assets/profileAvatar.jpg",
   },
   {
-    name: "Aline K.",
-    text: "Bible study sessions helped me grow spiritually and connect with amazing people in my community.",
+    name: "Peter M.",
+    text: "Bible study deepened my faith and connected me with wonderful people in my community.",
     img: "/assets/profileAvatar.jpg",
   },
 ];

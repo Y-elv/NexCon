@@ -203,7 +203,7 @@
   flex-direction: row;
   align-items: center;
   background: #fff;
-  border: 2px solid #e52d27;
+  border: 2px solid black;
   border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(255, 0, 0, 0.06);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
@@ -219,13 +219,14 @@
 .youtubeCard:hover {
   transform: translateY(-7px) scale(1.04) rotate(-1deg);
   box-shadow: 0 8px 24px rgba(255, 0, 0, 0.16);
-  border-color: #e52d27;
+  border: 2px solid #ffd700;
+  
 }
 
 .youtubeThumbnail {
   width: 170px;
   height: 125px;
-  border-right: 2px solid #e52d27;
+  border-right: 2px solid black;
   background: #fff;
   flex-shrink: 0;
 }
@@ -239,7 +240,7 @@
 }
 
 .youtubeCardTitle {
-  color: #e52d27;
+  color: black;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.2px;
@@ -248,8 +249,13 @@
 }
 
 .youtubeCard:hover .youtubeCardTitle {
-  color: #e52d27;
-  text-decoration: underline;
+  color: #ffd700;
+  text-decoration: none;
+  
+  
+}
+.youtubeThumbnail:hover {
+  border: 2px solid #ffd700;
 }
 
 .youtubeButton {

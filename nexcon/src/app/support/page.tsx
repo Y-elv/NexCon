@@ -5,6 +5,7 @@ import { BsBank } from "react-icons/bs";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
+import GrammarInput from "@/components/GrammarInput";
 
 export default function SupportPage() {
   return (
@@ -74,6 +75,10 @@ export default function SupportPage() {
           For any enquiries, support, or partnership, feel free to call or email
           us anytime.
         </p>
+      </div>
+      {/* Grammar Checker Section */}
+      <div className={styles.grammarBox}>
+        {/* <GrammarInput /> */}
       </div>
       <div className={styles.gratitudeNote}>
         <p>

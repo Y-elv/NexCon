@@ -1,32 +1,32 @@
 /* components/Footer.module.css */
+
 .footerContainer {
   width: 100vw;
-  /* Background from Navbar's .mainNavbar (excluding height, display, alignment) */
   background: linear-gradient(to right, #4f46e5, #1e3a8a, #5b21b6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  
-  /* Text and layout from Footer's previous Tailwind classes */
   color: white;
-  
-  /* Flexbox properties to center content both horizontally and vertically */
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  
-  /* Add some padding for breathing room */
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
-  
-  /* Reduced vertical padding to make it shorter */
   margin-top: 2.5rem;
-  
-  /* Ensure the border is visible if the footer has dynamic height */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Style for the paragraph inside the footer if needed */
 .footerText {
-  /* Add specific styles for the paragraph if it needs different font-size etc. */
-  margin: 0; /* Remove default paragraph margins */
-  text-align: center; /* Ensure text is centered within the paragraph */
+  margin: 0;
+  text-align: center;
+}
+
+/* New style for the Privacy Policy link */
+.footerLink {
+  margin-left: 0.5rem;
+  color: #93c5fd; /* Light blue for visibility */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: #bfdbfe; /* Slightly lighter on hover */
 }

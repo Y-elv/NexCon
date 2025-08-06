@@ -220,7 +220,6 @@
   transform: translateY(-7px) scale(1.04) rotate(-1deg);
   box-shadow: 0 8px 24px rgba(255, 0, 0, 0.16);
   border: 2px solid #ffd700;
-  
 }
 
 .youtubeThumbnail {
@@ -251,8 +250,6 @@
 .youtubeCard:hover .youtubeCardTitle {
   color: #ffd700;
   text-decoration: none;
-  
-  
 }
 .youtubeThumbnail:hover {
   border: 2px solid #ffd700;
@@ -505,7 +502,6 @@
   flex-direction: column;
   align-items: center;
   background: linear-gradient(135deg, #1e3a8a 0%, #f6da7e 50%, #4f46e5 100%);
-  
 }
 
 .supportHeading {
@@ -733,5 +729,50 @@
   .gratitudeNote {
     font-size: 0.93rem;
     padding: 0.7rem 0.4rem;
+  }
+}
+
+/* Intro Section Styles */
+.introSection {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.07);
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  margin: 2.5rem auto 3rem auto;
+  max-width: 900px;
+  width: 100%;
+  color: #1a202c;
+  font-size: 1.13rem;
+  line-height: 1.7;
+}
+.introSection h2 {
+  color: #4f46e5;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.introSection h3 {
+  color: #1e3a8a;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-top: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.introSection p {
+  margin-bottom: 1.1rem;
+  color: #374151;
+}
+@media (max-width: 700px) {
+  .introSection {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    font-size: 1rem;
+    border-radius: 0.7rem;
+  }
+  .introSection h2 {
+    font-size: 1.3rem;
+  }
+  .introSection h3 {
+    font-size: 1.05rem;
   }
 }

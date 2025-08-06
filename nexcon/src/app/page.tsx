@@ -89,6 +89,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Intro Section for SEO and Value */}
+      <section className={styles.introSection}>
+        <h2 className={styles.sectionTitle}>
+          Welcome to Enihakkore International Ministry
+        </h2>
+        <p>
+          At Enihakkore International Ministry, we believe that every person is
+          called to a life of purpose, hope, and transformation. Our ministry is
+          more than a gathering—it's a vibrant, faith-filled community where
+          people from all walks of life come together to experience the love of
+          Christ, grow spiritually, and make a positive impact in the world
+          around them.
+        </p>
+        <h3>Who We Are</h3>
+        <p>
+          Founded on the unshakable foundation of the Gospel, Enihakkore
+          International Ministry is dedicated to sharing the message of Jesus
+          Christ with passion and authenticity. Our name, inspired by the
+          biblical story of Samson, reminds us that God provides living water
+          and strength in every season. We are a diverse family—young and old,
+          new believers and seasoned followers—united by a desire to know God
+          more deeply and serve others selflessly.
+        </p>
+        <h3>What We Do</h3>
+        <p>
+          Our ministry offers a range of opportunities for spiritual growth,
+          practical support, and meaningful connection. Through dynamic worship
+          services, in-depth Bible studies, and life-changing prayer meetings,
+          we help individuals discover their God-given potential. We also reach
+          beyond our walls, providing food, education, and essential resources
+          to families in need, and equipping our community with practical skills
+          for daily life. Every program, event, and outreach is designed to
+          reflect Christ’s love in action.
+        </p>
+        <h3>What to Expect as a Visitor</h3>
+        <p>
+          When you visit Enihakkore, you’ll be welcomed with open arms and
+          genuine smiles. Expect uplifting music, relevant teaching, and a
+          supportive environment where your questions are valued and your
+          journey is honored. Whether you’re seeking answers, looking for
+          friendship, or longing for a deeper relationship with God, you’ll find
+          a place to belong here. Our community is built on encouragement,
+          respect, and a shared commitment to grow together in faith.
+        </p>
+        <h3>Our Purpose & Values</h3>
+        <p>
+          We exist to glorify God by empowering individuals and families to live
+          out their faith boldly. Our core values include compassion, integrity,
+          generosity, and unity. We believe in the power of prayer, the
+          importance of serving others, and the life-changing truth of God’s
+          Word. At Enihakkore, every person matters, and every story is part of
+          God’s greater plan.
+        </p>
+        <p>
+          Join us on this journey of faith, hope, and transformation. Together,
+          we are building a legacy of love that reaches far beyond our walls—one
+          life, one family, and one community at a time.
+        </p>
+      </section>
+
       {/* Previous Preachers Section */}
       <section className={styles.youtubeSection}>
         <h2 className={styles.youtubeTitle}>Previous Preachers</h2>

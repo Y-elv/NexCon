@@ -249,7 +249,6 @@
   font-weight: 600;
   transition: color 0.15s;
   text-decoration: none;
-  
 }
 .moreContentLink:hover {
   color: #f59e42;
@@ -260,6 +259,41 @@
   margin: 1.1rem 0 0.2rem 0;
   text-align: left;
   display: inline-block;
+}
+
+/* What You Can Expect Section Styles */
+.expectSection {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.07);
+  padding: 2.2rem 1.5rem 2.2rem 1.5rem;
+  margin: 2.5rem auto 2.5rem auto;
+  max-width: 900px;
+  width: 100%;
+  color: #1a202c;
+  font-size: 1.13rem;
+  line-height: 1.7;
+}
+.expectSection h2 {
+  color: #4f46e5;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.expectSection p {
+  margin-bottom: 0;
+  color: #374151;
+}
+@media (max-width: 700px) {
+  .expectSection {
+    padding: 1.1rem 0.7rem 1.1rem 0.7rem;
+    font-size: 1rem;
+    border-radius: 0.7rem;
+  }
+  .expectSection h2 {
+    font-size: 1.1rem;
+  }
 }
 
 /* Responsive */

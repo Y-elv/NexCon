@@ -17,6 +17,13 @@ export default function SupportPage() {
         <br />
         Your contribution empowers hope, faith, and community.
       </p>
+      {/* New Intro Paragraph */}
+      <p className={styles.donationIntro}>
+        Your generosity fuels every aspect of our ministry. Donations help us
+        reach more people, respond to urgent needs, and create lasting change in
+        our community. Every gift, no matter the size, is a seed of hope that
+        God uses to transform lives.
+      </p>
       <div className={styles.cardsGrid}>
         {/* MoMo Card */}
         <div className={styles.card}>
@@ -55,6 +62,24 @@ export default function SupportPage() {
           <span className={styles.cardNote}>Equity Bank</span>
         </div>
       </div>
+
+      {/* Where Your Gift Goes Section */}
+      <section className={styles.giftBreakdown}>
+        <h2>Where Your Gift Goes</h2>
+        <ul>
+          <li>Supporting outreach programs that share the love of Christ</li>
+          <li>Providing food and essentials to families in need</li>
+          <li>Youth education & discipleship initiatives</li>
+          <li>Buying ministry tools & materials for effective service</li>
+        </ul>
+        <p>
+          Because of your support, a single mother was able to feed her children
+          during a difficult season, and a group of young people received Bibles
+          and mentorship that changed their future. Your giving truly makes a
+          difference—thank you for partnering with us!
+        </p>
+      </section>
+
       {/* Contact Section */}
       <div className={styles.contactBox}>
         <h2 className={styles.contactTitle}>Contact Us</h2>
@@ -77,9 +102,7 @@ export default function SupportPage() {
         </p>
       </div>
       {/* Grammar Checker Section */}
-      <div className={styles.grammarBox}>
-        {/* <GrammarInput /> */}
-      </div>
+      <div className={styles.grammarBox}>{/* <GrammarInput /> */}</div>
       <div className={styles.gratitudeNote}>
         <p>
           Your generosity makes a real difference. Thank you for supporting

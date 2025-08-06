@@ -17,6 +17,15 @@ export default function AboutPage() {
         Enihakkore International Ministry is committed to empowering lives and
         spreading hope globally through faith, service, and love.
       </p>
+
+      {/* Our Story Section */}
+      <h2 className={styles.sectionTitle}>Our Story</h2>
+      <section className={styles.ourStorySection}>
+        <p>
+          Enihakkore International Ministry began with a simple vision: to be a wellspring of hope and transformation for all who thirst for God’s presence. Inspired by the story of Samson in Judges 15:19, our name means “spring of the caller,” reminding us that God hears and answers every cry. What started as a small gathering of passionate believers has grown into a thriving, diverse community united by faith, compassion, and a desire to serve. Over the years, we have witnessed countless lives changed—broken hearts healed, families restored, and individuals empowered to walk in their God-given purpose. Our journey is marked by prayer, perseverance, and a deep commitment to sharing the love of Christ in practical ways. Today, we continue to reach out, build up, and send forth people who will impact their world for Jesus. Whether you are new to faith or seeking a place to belong, our story is still being written—and you are invited to be part of it.
+        </p>
+      </section>
+
       {/* Mission/Vision Section */}
       <div className={styles.missionSection}>
         <h2 className={styles.sectionTitle}>Our Vision & Mission</h2>
@@ -24,16 +33,13 @@ export default function AboutPage() {
           <div className={styles.missionCard}>
             <h3>Our Vision</h3>
             <p>
-              To see communities transformed by the power of the Gospel, where
-              love, compassion, and justice prevail, creating a global impact.
+              Our vision is to see communities and nations transformed by the power of the Gospel. We dream of a world where love, compassion, and justice are not just ideals, but realities lived out daily. We envision families restored, the brokenhearted healed, and every person discovering their true identity and purpose in Christ. Through worship, teaching, and outreach, we seek to be a beacon of hope and a catalyst for positive change—locally and globally.
             </p>
           </div>
           <div className={styles.missionCard}>
             <h3>Our Mission</h3>
             <p>
-              To lead individuals into a deeper relationship with God, fostering
-              spiritual growth and personal development through the teachings of
-              Christ.
+              Our mission is to lead individuals into a deeper, life-changing relationship with God. We are committed to fostering spiritual growth, equipping believers to serve, and meeting practical needs in our community. Through discipleship, prayer, and acts of kindness, we strive to reflect the heart of Jesus in all we do. We believe that every person has a unique calling, and we are here to encourage, support, and empower you to fulfill it.
             </p>
           </div>
         </div>
@@ -49,8 +55,7 @@ export default function AboutPage() {
             </span>
             <h4 className={styles.beliefTitle}>The Bible</h4>
             <p className={styles.beliefDesc}>
-              We believe the scriptures are the inspired Word of God and the
-              foundation for our faith and practice.
+              We believe the Bible is the inspired and living Word of God—our ultimate guide for faith, life, and purpose. Its timeless truths shape our beliefs, direct our actions, and offer hope for every season. We encourage everyone to read, study, and apply God’s Word daily, trusting that it brings wisdom, comfort, and transformation.
             </p>
           </div>
           <div className={styles.beliefCard}>
@@ -59,8 +64,7 @@ export default function AboutPage() {
             </span>
             <h4 className={styles.beliefTitle}>Salvation</h4>
             <p className={styles.beliefDesc}>
-              We believe salvation is found in Jesus Christ alone, received by
-              grace through faith.
+              We believe salvation is a gift from God, received by grace through faith in Jesus Christ alone. Through His death and resurrection, we are forgiven, restored, and given new life. No matter your past, God’s love and mercy are available to you today. We celebrate every story of redemption and invite you to experience the joy of knowing Christ personally.
             </p>
           </div>
           <div className={styles.beliefCard}>
@@ -69,8 +73,7 @@ export default function AboutPage() {
             </span>
             <h4 className={styles.beliefTitle}>Community</h4>
             <p className={styles.beliefDesc}>
-              We believe in the importance of fellowship, unity, and serving one
-              another in love.
+              We believe in the power of authentic community. God created us to live in relationship—with Him and with one another. At Enihakkore, we value fellowship, unity, and serving each other in love. We strive to be a safe, welcoming place where everyone can grow, belong, and make a difference together.
             </p>
           </div>
           <div className={styles.beliefCard}>
@@ -79,8 +82,7 @@ export default function AboutPage() {
             </span>
             <h4 className={styles.beliefTitle}>Prayer</h4>
             <p className={styles.beliefDesc}>
-              We believe in the power of prayer to transform lives and
-              circumstances.
+              We believe prayer is powerful and essential. It is our lifeline to God—a place where we find strength, guidance, and peace. We are committed to praying for one another, our community, and the world. Through prayer, we have seen miracles, breakthroughs, and lives forever changed.
             </p>
           </div>
         </div>
